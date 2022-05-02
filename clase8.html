@@ -25,7 +25,10 @@
     }
     .mobile-menu {
       padding: 24px;
-      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
     }
     .mobile-menu a {
       text-decoration: none;
@@ -38,7 +41,7 @@
       margin: 24px 0 0;
       list-style: none;
     }
-    .mobile-menu .sub-menu1 {
+    .mobile-menu ul:nth-child(1) {
       border-bottom: 1px solid var(--very-light-pink);
     }
     .mobile-menu ul li {
@@ -52,19 +55,11 @@
       font-size: var(--sm);
       color: var(--hospital-green);
     }
-
-    .mobile-menu .sub-menu2 {
-      height: 100%;
-      display:flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-    }
   </style>
 </head>
 <body>
   <div class="mobile-menu">
-    <ul class="sub-menu1">
+    <ul>
       <li>
         <a href="/">CATEGORIES</a>
       </li>
@@ -87,25 +82,24 @@
         <a href="/">Other</a>
       </li>
     </ul>
-    <div class="sub-menu2">
-      <ul>
-        <li>
-          <a href="/">My orders</a>
-        </li>
-        <li>
-          <a href="/">My account</a>
-        </li>
-      </ul>
 
-      <ul>
-        <li>
-          <a href="/" class="email">platzi@example.com</a>
-        </li>
-        <li>
-          <a href="/" class="sign-out">Sign out</a>
-        </li>
-      </ul>
-    </div>
+    <ul>
+      <li>
+        <a href="/">My orders</a>
+      </li>
+      <li>
+        <a href="/">My account</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="/" class="email">platzi@example.com</a>
+      </li>
+      <li>
+        <a href="/" class="sign-out">Sign out</a>
+      </li>
+    </ul>
   </div>
 </body>
 </html>
